@@ -48,6 +48,11 @@ function checkMagnetWebseeds (file: { magnetUri: string, resolution: { id: numbe
 
 async function runServers (strategy: VideoRedundancyStrategy, additionalParams: any = {}) {
   const config = {
+    transcoding: {
+      hls: {
+        enabled: false
+      }
+    },
     redundancy: {
       videos: {
         check_interval: '5 seconds',
